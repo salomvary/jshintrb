@@ -40,7 +40,7 @@ describe "Jshintrb" do
 
   it "supports globals" do
     source = "foo();"
-    Jshintrb.lint(source, :defaults, [:foo]).length.should eq 0
+    Jshintrb.lint(source, :defaults, {:foo => true}).length.should eq 0
     Jshintrb.lint(source, :defaults).length.should eq 1
   end
 
